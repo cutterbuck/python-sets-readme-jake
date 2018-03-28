@@ -9,6 +9,7 @@ A **set** is a type of data collection that is useful for such a task. They are 
 Sets are much like lists, but with three key differences:
 
 
+
 #### 1) Elements are unique
 
 ```python
@@ -29,15 +30,16 @@ Out: {'M', 'i', 'p', 's'}
 A list contains all of the characters, whereas a set collects each character only once.
 
 
+
 #### 2) Elements are immutable
 
-Although a set can be operated upon as we will see soon, its constituent elements cannot be alterable objects. For example, a set's elements cannot be lists, dictionaries, or other sets because these objects can be changed. The code below produces a TypeError:
+Although a set itself is changeable, as we will see later on, its constituent elements must be immutable. For example, a set's elements cannot be lists, dictionaries, or other sets because these objects can be altered. The code below produces a TypeError:
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
 ```
 
-However, you can make a set of multiple tuples because tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses ```()``` instead of square brackets ```[]```.
+However, you can make a set of multiple tuples. Think of tuples as lists that cannot be altered. They are created with parentheses ```()``` instead of square brackets ```[]```.
 
 ```python
 teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "Nationals")))
@@ -45,7 +47,6 @@ teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "National
 teams
 Out: {('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
 ```
-
 
 
 
