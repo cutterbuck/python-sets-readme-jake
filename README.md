@@ -24,11 +24,36 @@ unique_letters
 Out: {'M', 'i', 'p', 's'}
 ```
 
-
-
+A list contains all of the characters, whereas a set collects each character only once.
 
 
 ### 2) Individual elements are immutable
+
+Elements of a set cannot be changed. For example, you cannot make a set of lists as elements because lists are changeable objects:
+
+```python
+teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
+```
+
+```python
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-12-a0ea7421e9b8> in <module>()
+----> 1 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
+
+TypeError: unhashable type: 'list'
+```
+
+However, you can make a set of tuples since tuples are immutable. A tuple is just like a list except with parentheses () instead of square brackets [].
+
+```python
+teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "Nationals")))
+```
+
+```python
+{('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
+```
+
 
 ### 3) Items in the collection are unordered
 
