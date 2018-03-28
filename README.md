@@ -2,7 +2,7 @@
 
 ## What are sets and why use them?
 
-Say you are writing an algorithm to determine whether an incoming email ought to be placed in your inbox or in your spam folder. You need to collect all of the unique words that appear in your your regular emails and your spam emails then check how often these words appear in each category. If the incoming email contains the words "free" and "consultation" and these words appear more often in spam than in regular messages, you know this email should be sent to your spam folder.
+Say you are writing an algorithm to determine whether an incoming email ought to be added your inbox or to your spam folder. You need to collect all of the unique words that appear in your your regular emails and your spam emails then check how often these words appear in each category, respectively. If the incoming email contains the words "free" and "consultation" and these words appear more often in spam than in regular messages, you know this email should be sent to your spam folder.
 
 A **set** is a type of data collection that is useful for such a task. They are handy whenever you need to collect only unique elements from a large collection. In the **Instant Data Science** lesson, you saw how to use a set to remove duplicate words from the list of “Barbara Ann” song lyrics.
 
@@ -77,10 +77,15 @@ A set can be created using Python's built-in ```set()``` function, as seen in th
 ```python
 things = {"Python", 3.14159, 1}
 
-languages = set(["Python", "Ruby", "JavaScript", "Perl"])
+languages = set(['JavaScript', 'Perl', 'Python', 'Ruby'])
 ```
 
+
+
+
+
 ## Operating on a set
+
 
 #### Adding an element
 
@@ -93,6 +98,7 @@ languages
 Out: {'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
 ```
 
+
 #### Adding multiple elements
 
 Pass a list into the ```update()``` method to add multiple elements to a set.
@@ -103,6 +109,7 @@ languages.update(["C", "C++"])
 languages
 Out: {'C', 'C++', 'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
 ```
+
 
 #### Removing an element
 
@@ -132,6 +139,7 @@ languages.remove("PHP")
 
     KeyError: 'PHP'
 
+
 #### Removing all elements
 
 The ```clear()``` function removes all of the elements from the set.
@@ -142,3 +150,36 @@ languages.clear()
 languages
 Out: set()
 ```
+
+
+#### Determining whether element is in the set
+
+Python easily allows us to check whether an element appears in our set. The ```in``` and ```not in``` keywords return a boolean depending upon whether the element of interest is found in the set.
+
+```python
+languages = set(["Python", "Ruby", "JavaScript", "Perl"])
+```
+
+```python
+"Python" in languages
+
+Out: True
+```
+
+```python
+"C++" in languages
+
+Out: False
+
+"C++" not in languages
+
+Out: True
+```
+
+
+
+
+
+## Working with multiple sets
+
+fsdf
