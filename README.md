@@ -7,7 +7,7 @@ A **set** is a type of data collection that is useful for such a task. They are 
 Sets are much like lists, but with three key differences:
 
 
-### 1) No duplicate elements
+### 1) Sets remove duplicate elements
 
 ```python
 all_letters = list("Mississippi")
@@ -33,9 +33,8 @@ Elements of a set cannot be changed. For example, you cannot make a set of lists
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
-```
 
-```python
+Out:
 TypeError                                 Traceback (most recent call last)
 <ipython-input-12-a0ea7421e9b8> in <module>()
     > 1 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
@@ -43,14 +42,12 @@ TypeError                                 Traceback (most recent call last)
 TypeError: unhashable type: 'list'
 ```
 
-However, you can make a set of tuples since tuples are immutable. A tuple is just like a list except with parentheses () instead of square brackets [].
+However, you can make a set of tuples since tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses () instead of square brackets [].
 
 ```python
 teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "Nationals")))
-```
 
-```python
-{('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
+Out: {('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
 ```
 
 
