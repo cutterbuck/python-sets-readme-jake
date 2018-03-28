@@ -6,7 +6,8 @@ A **set** is a type of data collection that is useful for such a task. They are 
 
 Sets are much like lists, but with three key differences:
 
-1) No duplicate elements
+
+### 1) No duplicate elements
 
 ```python
 uniques = set("Mississippi")
@@ -16,9 +17,9 @@ uniques = set("Mississippi")
 
 
 
-2) Individual elements are immutable
+### 2) Individual elements are immutable
 
-3) Items in the collection are unordered
+### 3) Items in the collection are unordered
 
 
 ## Creating a set
