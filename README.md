@@ -1,6 +1,6 @@
 # Introduction to Sets
 
-## What is a set and why do we use it?
+## What are sets and why use them?
 
 Say you are writing an algorithm to determine whether an incoming email ought to be placed in your inbox or in your spam folder. You need to collect all of the unique words that appear in your your regular emails and your spam emails then check how often these words appear in each category. If the incoming email contains the words "free" and "consultation" and these words appear more often in spam than in regular messages, you know this email should be sent to your spam folder.
 
@@ -91,4 +91,51 @@ languages.add("Java")
 
 languages
 Out: {'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
+```
+
+#### Adding multiple elements
+
+Pass a list into the ```update()``` method to add multiple elements to a set.
+
+```python
+languages.update(["C", "C++"])
+
+languages
+Out: {'C', 'C++', 'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
+```
+
+#### Removing an element
+
+Both the ```discard()``` and ```remove()``` methods remove elements from a set.
+
+```python
+languages.discard("C++")
+languages.remove("C++")
+
+languages
+Out: {'C', 'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
+```
+
+The ```remove()``` method raises an error if the element is not included in the set whereas ```discard()``` does not.
+
+```python
+languages.remove("PHP")
+```
+
+    ---------------------------------------------------------------------------
+    KeyError                                  Traceback (most recent call last)
+    <ipython-input-49-de307097e4ca> in <module>()
+    ----> 1 languages.remove("PHP")
+
+    KeyError: 'PHP'
+
+#### Removing all elements
+
+The ```clear()``` function removes all of the elements from the set.
+
+```python
+languages.clear()
+
+languages
+Out: set()
 ```
