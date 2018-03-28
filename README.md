@@ -29,17 +29,10 @@ A list contains all of the characters, whereas a set collects each character onl
 
 ### 2) Individual elements are immutable
 
-Elements of a set cannot be changed. For example, you cannot make a set of lists as elements because lists are changeable objects:
+Although a set can be operated upon, its constituent elements cannot be changed. For example, you cannot make a set of lists as elements because lists are changeable objects. The code below produces a TypeError:
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
-
-Out:
-TypeError                                 Traceback (most recent call last)
-<ipython-input-12-a0ea7421e9b8> in <module>()
-    > 1 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
-
-TypeError: unhashable type: 'list'
 ```
 
 However, you can make a set of tuples since tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses () instead of square brackets [].
@@ -47,11 +40,32 @@ However, you can make a set of tuples since tuples are immutable. Think of tuple
 ```python
 teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "Nationals")))
 
+teams
 Out: {('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
 ```
 
 
+
+
 ### 3) Items in the collection are unordered
+
+Elements of a set do not have order, therefore using an index to select an element produces a TypeError:
+
+```python
+teams[1]
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-106-8d1dfec3493a> in <module>()
+    ----> 1 teams[1]
+
+
+    TypeError: 'set' object does not support indexing
+
 
 
 ## Creating a set
