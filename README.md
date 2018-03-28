@@ -29,7 +29,7 @@ A list contains all of the characters, whereas a set collects each character onl
 
 #### 2) Individual elements are immutable
 
-Although a set can be operated upon, its constituent elements cannot be changed. For example, you cannot make a set of lists as elements because lists are changeable objects. The code below produces a TypeError:
+Although a set can be operated upon, its constituent elements cannot be alterable objects. For example, you cannot make a set featuring lists or dictionaries as elements because these objects can be changed. The code below produces a TypeError:
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
@@ -47,7 +47,7 @@ Out: {('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
 
 
 
-#### 3) Items in the collection are unordered
+#### 3) Items are unordered
 
 Elements of a set do not have order, therefore using an index to select an element produces a TypeError:
 
@@ -70,4 +70,10 @@ teams[1]
 
 ## Creating a set
 
-There are two ways to create a set.
+A set can be created with curly braces ```{}``` or using Python's built-in ```set()``` function, as seen in the examples above. Sets can consist of multiple data types as long as they are not mutable objects.
+
+```python
+things = {"Python", 3.14159, 1}
+
+languages = set(["Python", "Ruby", "JavaScript", "Perl"])
+```
