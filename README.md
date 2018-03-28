@@ -191,7 +191,9 @@ Let's say we have one set representing streets found in New York City and anothe
 ```python
 nyc = set(["34th St", "125th St", "High Street", "Oak St", "Elm St", "14th St", "Horatio St"])
 boston = set(["State St", "Beacon St", "Charles St", "High Street", "Oak St", "Elm St", "Boylston St"])
+```
 
+```python
 nyc.union(boston)
 
 Out:
