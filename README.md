@@ -10,10 +10,18 @@ Sets are much like lists, but with three key differences:
 ### 1) No duplicate elements
 
 ```python
-uniques = set("Mississippi")
+unique_letters = set("Mississippi")
 ```
 
+```python
+unique_letters
+```
+
+
+
+
      {'M', 'i', 'p', 's'}
+
 
 
 
