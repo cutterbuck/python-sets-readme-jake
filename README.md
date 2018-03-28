@@ -110,6 +110,9 @@ Both the ```discard()``` and ```remove()``` methods remove elements from a set.
 
 ```python
 languages.discard("C++")
+
+# or
+
 languages.remove("C++")
 
 languages
