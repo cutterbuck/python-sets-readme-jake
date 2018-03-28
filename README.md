@@ -2,7 +2,7 @@
 
 ## What are sets?
 
-A set is another type of data collection that is useful for tracking only unique elements. You used a set in the Instant Data Science lesson to remove duplicate words from the list of “Barbara Ann” song lyrics.
+A set is another type of data collection that is useful for tracking only unique elements. You used a set in the **Instant Data Science** lesson to remove duplicate words from the list of “Barbara Ann” song lyrics.
 
 Sets are similar to lists, but have three key differences:
 
