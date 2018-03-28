@@ -31,7 +31,7 @@ A list contains all of the characters, whereas a set collects each character onl
 
 #### 2) Elements are immutable
 
-Although a set can be operated upon, its constituent elements cannot be alterable objects. For example, you cannot make a set featuring multiple lists or dictionaries as elements because these objects can be changed. The code below produces a TypeError:
+Although a set can be operated upon as we will see soon, its constituent elements cannot be alterable objects. For example, a set's elements cannot be lists, dictionaries, or other sets because these objects can be changed. The code below produces a TypeError:
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
@@ -152,7 +152,7 @@ Out: set()
 ```
 
 
-#### Determining whether element is in the set
+#### Is this element in the set?
 
 Python easily allows us to check whether an element appears in our set. The ```in``` and ```not in``` keywords return a boolean depending upon whether the element of interest is found in the set.
 
