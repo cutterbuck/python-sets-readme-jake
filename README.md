@@ -35,7 +35,7 @@ Although a set can be operated upon, its constituent elements cannot be changed.
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
 ```
 
-However, you can make a set of tuples since tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses () instead of square brackets [].
+However, you can make a set of tuples since tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses ```()``` instead of square brackets ```[]```.
 
 ```python
 teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "Nationals")))
