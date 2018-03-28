@@ -36,10 +36,9 @@ teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "National
 ```
 
 ```python
----------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 <ipython-input-12-a0ea7421e9b8> in <module>()
-----> 1 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
+    > 1 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
 
 TypeError: unhashable type: 'list'
 ```
