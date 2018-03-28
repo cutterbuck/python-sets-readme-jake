@@ -221,3 +221,23 @@ nyc.intersection(boston)
 Out:
 {'Elm St', 'High Street', 'Oak St'}
 ```
+
+
+#### Difference
+
+Now imagine that you are writing a history of Boston and you want to collect only the names of streets that are unique to Boston. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in NYC.
+
+```python
+boston.difference(nyc)
+
+# or
+
+boston - nyc
+
+Out:
+{'Beacon St', 'Boylston St', 'Charles St', 'State St'}
+```
+
+
+
+### Summary
