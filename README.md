@@ -7,7 +7,7 @@ A **set** is a type of data collection that is useful for such a task. They are 
 Sets are much like lists, but with three key differences:
 
 
-### 1) Sets remove duplicate elements
+#### 1) Sets remove duplicate elements
 
 ```python
 all_letters = list("Mississippi")
@@ -27,7 +27,7 @@ Out: {'M', 'i', 'p', 's'}
 A list contains all of the characters, whereas a set collects each character only once.
 
 
-### 2) Individual elements are immutable
+#### 2) Individual elements are immutable
 
 Although a set can be operated upon, its constituent elements cannot be changed. For example, you cannot make a set of lists as elements because lists are changeable objects. The code below produces a TypeError:
 
@@ -47,7 +47,7 @@ Out: {('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
 
 
 
-### 3) Items in the collection are unordered
+#### 3) Items in the collection are unordered
 
 Elements of a set do not have order, therefore using an index to select an element produces a TypeError:
 
@@ -60,7 +60,7 @@ teams[1]
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-106-8d1dfec3493a> in <module>()
+    <ipython-input-20-5bc081d74201> in <module>()
     ----> 1 teams[1]
 
 
