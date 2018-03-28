@@ -31,13 +31,13 @@ A list contains all of the characters, whereas a set collects each character onl
 
 #### 2) Elements are immutable
 
-Although a set can be operated upon, its constituent elements cannot be alterable objects. For example, you cannot make a set featuring lists or dictionaries as elements because these objects can be changed. The code below produces a TypeError:
+Although a set can be operated upon, its constituent elements cannot be alterable objects. For example, you cannot make a set featuring multiple lists or dictionaries as elements because these objects can be changed. The code below produces a TypeError:
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
 ```
 
-However, you can make a set of tuples since tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses ```()``` instead of square brackets ```[]```.
+However, you can make a set of multiple tuples because tuples are immutable. Think of tuples as lists that cannot be altered. They are created with parentheses ```()``` instead of square brackets ```[]```.
 
 ```python
 teams = set((("Yankees", "Red Sox", "Blue Jays"), ("Mets", "Phillies", "Nationals")))
@@ -72,7 +72,7 @@ teams[1]
 
 ## Creating a set
 
-A set can be created with curly braces ```{}``` or using Python's built-in ```set()``` function, as seen in the examples above. Sets can consist of multiple data types as long as they are not mutable objects.
+A set can be created using Python's built-in ```set()``` function, as seen in the examples above, or with curly braces ```{}```. A single list can be passed into the built-in ```set()``` function. Sets can consist of multiple datatypes as long as they are not mutable objects.
 
 ```python
 things = {"Python", 3.14159, 1}
@@ -81,3 +81,14 @@ languages = set(["Python", "Ruby", "JavaScript", "Perl"])
 ```
 
 ## Operating on a set
+
+#### Adding an element
+
+Use the ```add()``` function to add single elements to the set, as long as the element isn't already contained in the set.
+
+```python
+languages.add("Java")
+
+languages
+Out: {'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
+```
