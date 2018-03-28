@@ -1,13 +1,15 @@
 # Introduction to Sets
 
+## What is a set and why do we use it?
+
 Say you are writing an algorithm to determine whether an incoming email ought to be placed in your inbox or in your spam folder. You need to collect all of the unique words that appear in your your regular emails and your spam emails then check how often these words appear in each category. If the incoming email contains the words "free" and "consultation" and these words appear more often in spam than in regular messages, you know this email should be sent to your spam folder.
 
-A **set** is a type of data collection that is useful for such a task. They are handy whenever you need to collect only unique elements from a large collection. You saw how to use a set in the **Instant Data Science** lesson to remove duplicate words from the list of “Barbara Ann” song lyrics.
+A **set** is a type of data collection that is useful for such a task. They are handy whenever you need to collect only unique elements from a large collection. In the **Instant Data Science** lesson, you saw how to use a set to remove duplicate words from the list of “Barbara Ann” song lyrics.
 
 Sets are much like lists, but with three key differences:
 
 
-#### 1) Sets remove duplicate elements
+#### 1) Elements are unique
 
 ```python
 all_letters = list("Mississippi")
@@ -27,7 +29,7 @@ Out: {'M', 'i', 'p', 's'}
 A list contains all of the characters, whereas a set collects each character only once.
 
 
-#### 2) Individual elements are immutable
+#### 2) Elements are immutable
 
 Although a set can be operated upon, its constituent elements cannot be alterable objects. For example, you cannot make a set featuring lists or dictionaries as elements because these objects can be changed. The code below produces a TypeError:
 
@@ -47,7 +49,7 @@ Out: {('Mets', 'Phillies', 'Nationals'), ('Yankees', 'Red Sox', 'Blue Jays')}
 
 
 
-#### 3) Items are unordered
+#### 3) Elements are unordered
 
 Elements of a set do not have order, therefore using an index to select an element produces a TypeError:
 
@@ -77,3 +79,5 @@ things = {"Python", 3.14159, 1}
 
 languages = set(["Python", "Ruby", "JavaScript", "Perl"])
 ```
+
+## Operating on a set
