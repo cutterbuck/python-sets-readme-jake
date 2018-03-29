@@ -4,9 +4,9 @@
 
 Say you are writing an algorithm to determine whether an incoming email ought to be added to your inbox or to your spam folder. You need to collect all of the unique words that appear in your regular emails and your spam emails then check how often these words appear in each category, respectively. If the incoming email contains the words "free" and "consultation" and these words appear more often in spam than in regular messages, then you know this email should be sent to your spam folder.
 
-A **set** is a type of data collection that is useful for such a task. They are handy whenever you need to collect only unique elements from a large collection. In the **Instant Data Science** lesson, you saw how to use a set to remove duplicate words from the list of “Barbara Ann” song lyrics.
+**Sets** are a type of data collection particularly useful in such a scenario. They are handy whenever you need to collect only unique elements from a list of data. In the **Instant Data Science** lesson, you saw how to use a set to remove duplicate words from the list of “Barbara Ann” song lyrics.
 
-Sets are much like lists, but with three key differences:
+Sets are like lists, but with three key differences:
 
 
 
@@ -27,7 +27,7 @@ unique_letters
 Out: {'M', 'i', 'p', 's'}
 ```
 
-A list contains all of the characters, whereas a set collects each character only once.
+The list contains all of the characters, but the set collects each character only once.
 
 
 
@@ -73,7 +73,7 @@ teams[1]
 
 ## Creating a set
 
-A set can be created using Python's built-in ```set()``` function, as seen in the examples above, or with curly braces ```{}```. A single list can be passed into the built-in ```set()``` function. Sets can consist of multiple datatypes as long as they are not mutable objects.
+A set can be created using Python's built-in ```set()``` function, as seen in the examples above, or with curly braces ```{}```. A single list can be passed into the built-in ```set()``` function. Sets can consist of multiple datatypes but not mutable objects like lists, dictionaries, or other sets.
 
 ```python
 things = {"Python", 3.14159, 1}
@@ -87,7 +87,7 @@ languages = set(['JavaScript', 'Perl', 'Python', 'Ruby'])
 
 ## Operating on a set
 
-As programmers, we tend to be lazy. We want our code to be as concise and clean as possible. Programming is a collaborative effort and concise code makes it easy for others to understand our programs. Fortunately, Python provides us with a variety of built-in functions for operating on sets in a clean and intuitive manner.
+As programmers, we tend to be lazy. We want our code to be as concise and clean as possible. Programming is a collaborative effort and concise code makes it easy for others to understand our work. Fortunately, Python provides us with a variety of built-in functions for operating on sets in a clean and intuitive manner.
 
 #### Adding an element
 
@@ -154,7 +154,7 @@ Out: set()
 ```
 
 
-#### Is this element in the set?
+#### Checking for elements in the set
 
 We can check whether an element appears in our set using the ```in``` and ```not in``` keywords. Both ```in``` and ```not in``` return a boolean depending upon whether the element of interest is found in the set.
 
@@ -189,7 +189,7 @@ Out: True
 
 #### Union
 
-Let's say we have one set of streets found in New York City and another of streets found in Boston. How can we collect all of the streets in New York City and Boston without double counting the streets that exist in both cities? The ***Union*** of two sets is a set of elements which are in ***either*** set. Use the  ```union()``` method or the ```|``` operator to handle these situations.
+Let's say we have two sets: one of streets in New York City and another of streets in Boston. How can we collect all of the streets in New York City and Boston without double counting the streets that exist in both cities? The ***Union*** of two sets is a set of elements which are in ***either*** set. Use the  ```union()``` method or the ```|``` operator to handle these situations.
 
 ```python
 nyc = set(["34th St", "125th St", "High Street", "Oak St", "Elm St", "14th St", "Horatio St"])
@@ -217,12 +217,12 @@ Out:
  'State St'}
  ```
 
-Since "High Street", "Oak St", and "Elm St" appear in just about every city in the country, it's not surprising that they exist in both NYC and Boston! ```union()``` and ```|``` count these streets only once.
+Since "High Street", "Oak St", and "Elm St" appear in just about every city in the country, it's not surprising that they exist in both NYC and Boston! Note that ```union()``` and ```|``` count these streets only once.
 
 
 #### Intersection
 
-What if we only care about the cities that appear in both cities? The **Intersection** of two sets is the set of elements found in **both** sets. As you expected, the ```intersection()``` method and the ```&``` operator work in the same manner.
+What if we only care about the cities that appear in both cities? The ***Intersection*** of two sets is the set of elements found in ***both*** sets. As you expected, the ```intersection()``` method and the ```&``` operator work in the same manner.
 
 ```python
 nyc.intersection(boston)
@@ -238,7 +238,7 @@ Out:
 
 #### Difference
 
-Now imagine that you are writing a history of Boston and you're interested only in streets unique to Boston. The **Difference** of two sets is the set of elements in one set **but not** the other. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in NYC.
+Now imagine that you are writing a history of Boston and you're interested only in streets unique to Boston. The ***Difference*** of two sets is the set of elements in one set ***but not*** the other. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in NYC.
 
 ```python
 boston.difference(nyc)
@@ -255,4 +255,4 @@ Out:
 
 ### Summary
 
-In this section we learned how to use sets to find only the unique values from a collection of data. We learned that sets differ from lists because their elements are unique, immutable, and unordered. Python provides a variety of methods to easily add, remove, and clear all elements from the set. Furthermore, we learned how to work with multiple sets using ```union()```, ```intersection()```, and ```difference()```.
+In this section we learned how to use sets to find only the unique values from a collection of data. We learned that sets differ from lists because their elements are unique, immutable, and unordered. Python provides a variety of methods to easily add, remove, and clear all elements from the set. Lastly, we learned how to work with multiple sets using ```union()```, ```intersection()```, and ```difference()```.
