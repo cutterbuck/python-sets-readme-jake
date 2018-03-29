@@ -87,10 +87,11 @@ languages = set(['JavaScript', 'Perl', 'Python', 'Ruby'])
 
 ## Operating on a set
 
+As programmers, we tend to be lazy. We want our code to be as concise and clean as possible. Programming is a collaborative effort and concise code makes it easy for others to understand our programs. Fortunately, Python provides us with a variety of built-in functions for operating on sets in a clean and intuitive manner.
 
 #### Adding an element
 
-Use the ```add()``` function to add single elements to the set, as long as the element isn't already contained in the set.
+The ```add()``` function adds a single element to the set, as long as said element isn't already contained in the set.
 
 ```python
 languages.add("Java")
@@ -114,7 +115,7 @@ Out: {'C', 'C++', 'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
 
 #### Removing an element
 
-Both the ```discard()``` and ```remove()``` methods remove elements from a set.
+Both the ```discard()``` and ```remove()``` methods remove a single element.
 
 ```python
 languages.discard("C++")
@@ -127,7 +128,7 @@ languages
 Out: {'C', 'Java', 'JavaScript', 'Perl', 'Python', 'Ruby'}
 ```
 
-The ```remove()``` method raises an error if the element is not included in the set whereas ```discard()``` does not.
+Note that the ```remove()``` method raises an error if the element is not included in the set whereas ```discard()``` does not.
 
 ```python
 languages.remove("PHP")
@@ -155,7 +156,7 @@ Out: set()
 
 #### Is this element in the set?
 
-Python easily allows us to check whether an element appears in our set. The ```in``` and ```not in``` keywords return a boolean depending upon whether the element of interest is found in the set.
+We can check whether an element appears in our set using the ```in``` and ```not in``` keywords. Both ```in``` and ```not in``` return a boolean depending upon whether the element of interest is found in the set.
 
 ```python
 languages = set(["Python", "Ruby", "JavaScript", "Perl"])
@@ -171,7 +172,9 @@ Out: True
 "C++" in languages
 
 Out: False
+```
 
+```python
 "C++" not in languages
 
 Out: True
@@ -186,7 +189,7 @@ Out: True
 
 #### Union
 
-Let's say we have one set representing streets found in New York City and another containing streets found in Boston. How can we collect all of the streets in New York City and Boston without double counting the streets that exist in both cities? Python provides the ```union()``` method to handle these situations.
+Let's say we have one set of streets found in New York City and another of streets found in Boston. How can we collect all of the streets in New York City and Boston without double counting the streets that exist in both cities? The **Union** of two sets is a set of elements which are in **either** set. Use the  ```union()``` method or the ```|``` operator to handle these situations.
 
 ```python
 nyc = set(["34th St", "125th St", "High Street", "Oak St", "Elm St", "14th St", "Horatio St"])
@@ -195,6 +198,10 @@ boston = set(["State St", "Beacon St", "Charles St", "High Street", "Oak St", "E
 
 ```python
 nyc.union(boston)
+
+# or
+
+nyc | boston
 
 Out:
 {'125th St',
@@ -210,15 +217,19 @@ Out:
  'State St'}
  ```
 
-Since "High Street", "Oak St", and "Elm St" appear in just about every city in the country, it turns out they exist in both NYC and Boston! Python's ```union()``` method counts these streets only once.
+Since "High Street", "Oak St", and "Elm St" appear in just about every city in the country, it's not surprising that they exist in both NYC and Boston! ```union()``` and ```|``` count these streets only once.
 
 
 #### Intersection
 
-What if we only care about the cities that exist in both cities? As you expected, the ```intersection()``` method works in the same manner.
+What if we only care about the cities that appear in both cities? The **Intersection** of two sets is the set of elements found in **both** sets. As you expected, the ```intersection()``` method and the ```&``` operator work in the same manner.
 
 ```python
 nyc.intersection(boston)
+
+# or
+
+nyc & boston
 
 Out:
 {'Elm St', 'High Street', 'Oak St'}
@@ -227,7 +238,7 @@ Out:
 
 #### Difference
 
-Now imagine that you are writing a history of Boston and you want to collect only the names of streets that are unique to Boston. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in NYC.
+Now imagine that you are writing a history of Boston and you're interested only in streets unique to Boston. The **Difference** of two sets is the set of elements in one set **but not** the other. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in both Boston and NYC.
 
 ```python
 boston.difference(nyc)
@@ -243,3 +254,5 @@ Out:
 
 
 ### Summary
+
+In this section we learned how to use sets to find only the unique values from a collection of data. We learned that sets differ from lists because their elements are unique, immutable, and unordered. Python provides a variety of methods to easily add, remove, and clear all elements from the set. Furthermore, we learned how to work with multiple sets using ```union()```, ```intersection()```, and ```difference()```.
