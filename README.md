@@ -189,7 +189,7 @@ Out: True
 
 #### Union
 
-Let's say we have one set of streets found in New York City and another of streets found in Boston. How can we collect all of the streets in New York City and Boston without double counting the streets that exist in both cities? The **Union** of two sets is a set of elements which are in **either** set. Use the  ```union()``` method or the ```|``` operator to handle these situations.
+Let's say we have one set of streets found in New York City and another of streets found in Boston. How can we collect all of the streets in New York City and Boston without double counting the streets that exist in both cities? The ***Union*** of two sets is a set of elements which are in ***either*** set. Use the  ```union()``` method or the ```|``` operator to handle these situations.
 
 ```python
 nyc = set(["34th St", "125th St", "High Street", "Oak St", "Elm St", "14th St", "Horatio St"])
@@ -238,7 +238,7 @@ Out:
 
 #### Difference
 
-Now imagine that you are writing a history of Boston and you're interested only in streets unique to Boston. The **Difference** of two sets is the set of elements in one set **but not** the other. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in both Boston and NYC.
+Now imagine that you are writing a history of Boston and you're interested only in streets unique to Boston. The **Difference** of two sets is the set of elements in one set **but not** the other. You can use the ```difference()``` method or simple subtraction ```-``` to eliminate the streets found in NYC.
 
 ```python
 boston.difference(nyc)
