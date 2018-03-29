@@ -33,7 +33,7 @@ The list contains all of the characters, but the set collects each character onl
 
 #### 2) Elements are immutable
 
-Although a set itself is changeable, as we will see later on, its constituent elements must be immutable. For example, a set's elements cannot be lists, dictionaries, or other sets because these objects can be altered. Copy and paste the code below into a Jupyter Notebook and you will see a TypeError:
+Although a set itself is changeable, as we will see later on, its constituent elements must be immutable. For example, a set's elements cannot be lists, dictionaries, or other sets because these objects can be altered. Copy and paste the code below into a Jupyter Notebook and you will see a TypeError.
 
 ```python
 teams = set((["Yankees", "Red Sox", "Blue Jays"], ["Mets", "Phillies", "Nationals"]))
